@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<synthetic xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd" xmlns="http://www.xebialabs.com/deployit/synthetic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+<!--- Enhanced Webhook -->
+
+<type type="webhook.JsonWebhookWithHeaders" extends="webhook.WebHook">
+    <property name="outputVarHelpText" hidden="true" default="Specify the release variable in which to store the result of the JSON query (optional)" />
+    <property name="jsonPathExpression" category="input" label="JSON Path Expression 1" required="false" description="JSON Path expression to select the first value"/>
+    <property name="jsonPathExpression2" category="input" label="JSON Path Expression 2" required="false" description="JSON Path expression to select the second value"/>
+    <property name="jsonPathExpression3" category="input" label="JSON Path Expression 3" required="false" description="JSON Path expression to select the third value"/>
+    
+    <property name="scriptLocation" default="webhook/Webhook_JSONHeaders.py" hidden="true" />
+    <property name="headerName" category="input" required="false" description="Header name"/>
+    <property name="headerContent" password="true" category="input" required="false" description="Header content"/>
+    
+</type>
+  
+</synthetic>
